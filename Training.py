@@ -21,7 +21,7 @@ import matplotlib.pyplot as plt
 import seaborn as sns
 import os
 
-login(token="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")  # deinen Token hier einfügen
+login(token=XXXXXXXX ENTFERNT XXXXXXXXX)  
 
 # Device Setup
 
