@@ -1,4 +1,4 @@
-Projektübersicht
+##Projektübersicht
 
 Dieses Projekt implementiert und vergleicht verschiedene Modelle zur automatischen Erkennung von Fake News im medizinischen Bereich unter Verwendung des PubHealth-Datensatzes. Ziel ist der experimentelle Vergleich von klassischen Machine-Learning-Methoden und Transformer-basierten Sprachmodellen.
 
@@ -52,13 +52,6 @@ Installation
 pip install -r requirements.txt
 Nutzung
 
-Beispiel für Training:
-
-python train.py --model bert --strategy title_and_content
-
-Beispiel für Evaluation:
-
-python evaluate.py --model llama --checkpoint ./checkpoints
 Hardware
 GPU: NVIDIA RTX 5080 (16GB VRAM)
 LLaMA Training mit reduzierter Batch Size (4 statt 16)
