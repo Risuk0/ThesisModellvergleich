@@ -73,12 +73,15 @@ Zur vollständigen Reproduzierbarkeit wurden folgende Einstellungen fixiert:
 
 ```bash
 pip install -r requirements.txt
- Lizenzen
-Komponente	Lizenz	Quelle
-PubHealth Datensatz	MIT License:	neemakot/Health-Fact-Checking
-BERT	Apache License 2.0:	google-bert/bert
-RoBERTa	MIT License:	facebookresearch/fairseq
-LLaMA 3.2:	Meta LLaMA 3.2 Community License	Meta AI
- Die Nutzung von LLaMA 3.2 erfordert die Akzeptanz der Meta LLaMA 3.2 Community License auf HuggingFace.
+##  Lizenzen
+
+| Komponente | Lizenz | Quelle |
+|---|---|---|
+| PubHealth Datensatz | MIT License | [neemakot/Health-Fact-Checking](https://github.com/neemakot/Health-Fact-Checking) |
+| BERT | Apache License 2.0 | [google-bert/bert](https://github.com/google-research/bert/blob/master/LICENSE) |
+| RoBERTa | MIT License | [facebookresearch/fairseq](https://github.com/facebookresearch/fairseq/blob/main/LICENSE) |
+| LLaMA 3.2 | Meta LLaMA 3.2 Community License | [Meta AI](https://www.llama.com/llama3_2_community_license_agreement) |
+
+> ⚠️ Die Nutzung von LLaMA 3.2 erfordert die Akzeptanz der Meta LLaMA 3.2 Community License auf [HuggingFace](https://huggingface.co/meta-llama/Llama-3.2-3B).
 
 
