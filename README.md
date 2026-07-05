@@ -1,7 +1,8 @@
 #  Medical Fake News Detection
 
-Automatische Erkennung medizinischer Falschinformationen mit vortrainierten Sprachmodellen auf dem PubHealth-Datensatz.
+Vergleich von Large Language Models zur semantischen Fake-News-Erkennung in medizinischen Textdaten.
 
+Dieses Repository enthält den Quellcode zur Bachelorarbeit von Pascal Hartmann
 ---
 
 ##  Projektübersicht
