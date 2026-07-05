@@ -58,7 +58,7 @@ Zur vollständigen Reproduzierbarkeit wurden folgende Einstellungen fixiert:
 - Identischer Datensatz-Split für alle Modelle
 - Einheitliche maximale Tokenlänge (512)
 - Gleiche Evaluierungsmetriken für alle Modelle
-
+- Datensatz von (https://github.com/neemakot/Health-Fact-Checking) mit dem Download Link in der Readme unter "DATA" heruntergeladen
 ---
 
 ##  Hardware
