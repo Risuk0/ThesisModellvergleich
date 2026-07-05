@@ -74,8 +74,11 @@ Zur vollständigen Reproduzierbarkeit wurden folgende Einstellungen fixiert:
 ```bash
 pip install -r requirements.txt
  Lizenzen
-Modell	Lizenz	Quelle
-BERT	Apache License 2.0	Devlin et al. (2019)
-RoBERTa	Apache License 2.0	Liu et al. (2019)
-LLaMA 3.2	Meta LLaMA 3.2 Community License	Meta AI (2024)
-Die Nutzung von LLaMA 3.2 erfolgt unter Einhaltung der Meta LLaMA 3.2 Community License.
+Komponente	Lizenz	Quelle
+PubHealth Datensatz	MIT License	neemakot/Health-Fact-Checking
+BERT	Apache License 2.0	google-bert/bert
+RoBERTa	MIT License	facebookresearch/fairseq
+LLaMA 3.2	Meta LLaMA 3.2 Community License	Meta AI
+ Die Nutzung von LLaMA 3.2 erfordert die Akzeptanz der Meta LLaMA 3.2 Community License auf HuggingFace.
+
+
