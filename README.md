@@ -1,6 +1,5 @@
-#  Medical Fake News Detection
+#  Vergleich von Large Language Models zur semantischen Fake-News-Erkennung in medizinischen Textdaten.
 
-Vergleich von Large Language Models zur semantischen Fake-News-Erkennung in medizinischen Textdaten.
 -------------------------------------------------------------------------------------------------------
 Dieses Repository enthält den Quellcode zur Bachelorarbeit von Pascal Hartmann
 
