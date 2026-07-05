@@ -1,70 +1,81 @@
-##Projektübersicht
+#  Medical Fake News Detection
 
-Dieses Projekt implementiert und vergleicht verschiedene Modelle zur automatischen Erkennung von Fake News im medizinischen Bereich unter Verwendung des PubHealth-Datensatzes. Ziel ist der experimentelle Vergleich von klassischen Machine-Learning-Methoden und Transformer-basierten Sprachmodellen.
+Automatische Erkennung medizinischer Falschinformationen mit vortrainierten Sprachmodellen auf dem PubHealth-Datensatz.
 
-Verwendete Modelle
+---
 
-In diesem Projekt wurden folgende Modelle verwendet:
+##  Projektübersicht
 
-BERT
-RoBERTa
-LLaMA 3.2 (LoRA Fine-Tuning)
-TF-IDF + Logistische Regression (Baseline)
-Textkombinationsstrategien
+Dieses Projekt implementiert und vergleicht verschiedene Modelle zur automatischen Erkennung von Fake News im medizinischen Bereich. Ziel ist der experimentelle Vergleich klassischer Machine-Learning-Methoden mit Transformer-basierten Sprachmodellen auf dem PubHealth-Datensatz.
 
-Die Modelle wurden mit folgenden Eingabestrategien getestet:
+---
 
-title_only
-content_only
-title_and_content
-Trainingssetup
-Datensatz: PubHealth
-Split: 80/20 stratifiziert
-Random State: 42
-Maximale Sequenzlänge: 512 Tokens
-Optimierung:
-BERT / RoBERTa: Full Fine-Tuning
-LLaMA 3.2: LoRA (parameter-efficient fine-tuning)
-Evaluation
+##  Verwendete Modelle
 
-Die Modelle wurden mit folgenden Metriken bewertet:
+| Modell | Methode |
+|---|---|
+| BERT | Full Fine-Tuning |
+| RoBERTa | Full Fine-Tuning |
+| LLaMA 3.2 3B | LoRA Fine-Tuning (PEFT) |
+| TF-IDF + Logistische Regression | Baseline |
 
-Accuracy
-Precision
-Recall
-F1-Macro-Score
-Confusion Matrix
-Ergebnisse (Best Model Comparison)
-Modell	Beste Strategie	F1-Macro
-LLaMA 3.2 (LoRA)	title_and_content	89.14%
-RoBERTa	title_and_content	86.58%
-BERT	title_and_content	85.92%
-TF-IDF Baseline	content_only	80.69%
-Reproduzierbarkeit
+---
 
-Zur Reproduzierbarkeit wurden folgende Einstellungen fixiert:
+##  Ergebnisse
 
-random_state = 42
-identischer Datensatz-Split
-gleiche Evaluierungsmetriken
-feste maximale Tokenlänge (512)
-Installation
+| Modell | Beste Strategie | F1-Macro |
+|---|---|---|
+|  LLaMA 3.2 (LoRA) | title_and_content | 89.14 % |
+|  RoBERTa | title_and_content | 86.58 % |
+|  BERT | title_and_content | 85.92 % |
+| TF-IDF Baseline | content_only | 80.69 % |
+
+---
+
+##  Trainingssetup
+
+- **Datensatz:** PubHealth
+- **Split:** 80/20 (stratifiziert, `random_state=42`)
+- **Maximale Sequenzlänge:** 512 Tokens
+- **Textkombinationsstrategien:** `title_only` · `content_only` · `title_and_content`
+
+---
+
+##  Evaluierungsmetriken
+
+- Accuracy
+- Precision & Recall
+- F1-Macro-Score
+- Konfusionsmatrix
+
+---
+
+##  Reproduzierbarkeit
+
+Zur vollständigen Reproduzierbarkeit wurden folgende Einstellungen fixiert:
+
+- `random_state = 42`
+- Identischer Datensatz-Split für alle Modelle
+- Einheitliche maximale Tokenlänge (512)
+- Gleiche Evaluierungsmetriken für alle Modelle
+
+---
+
+##  Hardware
+
+- **GPU:** NVIDIA RTX 5080 (16 GB VRAM)
+- **Trainings-Präzision:** bf16
+- **Hinweis:** LLaMA wurde aufgrund von VRAM-Beschränkungen mit `batch_size=4` trainiert
+
+---
+
+##  Installation
+
+```bash
 pip install -r requirements.txt
-Nutzung
-
-Hardware
-GPU: NVIDIA RTX 5080 (16GB VRAM)
-LLaMA Training mit reduzierter Batch Size (4 statt 16)
-Lizenz und Drittmodelle
-
-Dieses Projekt verwendet Modelle unter unterschiedlichen Lizenzen:
-
-BERT
-Lizenz: Apache License 2.0
-Quelle: Original BERT Paper (Devlin et al., 2019)
-RoBERTa
-Lizenz: Apache License 2.0
-Quelle: Liu et al. (2019)
-LLaMA 3.2
-Lizenz: Meta LLaMA 3.2 Community License
-Nutzung unter Einhaltung der Meta-Nutzungsbedingungen
+ Lizenzen
+Modell	Lizenz	Quelle
+BERT	Apache License 2.0	Devlin et al. (2019)
+RoBERTa	Apache License 2.0	Liu et al. (2019)
+LLaMA 3.2	Meta LLaMA 3.2 Community License	Meta AI (2024)
+Die Nutzung von LLaMA 3.2 erfolgt unter Einhaltung der Meta LLaMA 3.2 Community License.
